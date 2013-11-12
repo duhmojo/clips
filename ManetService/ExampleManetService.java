@@ -122,6 +122,7 @@ public class CommService extends Service implements LocationListener {
 
 		manetHelper = new ManetHelper(this.getApplicationContext());
 		manetManagerObserver = new ManetManagerObserver(manetHelper);
+		Log.i(TAG, "Connecting to Manet Manager's Service");
 		manetHelper.connectToService();
 	}
 
