@@ -33,8 +33,8 @@ import android.os.IBinder;
 import android.provider.Settings.Secure;
 import android.util.Log;
 
-public class CommService extends Service implements LocationListener {
-	public final static String TAG = "WifiCommService";
+public class ExampleManetService extends Service implements LocationListener {
+	public final static String TAG = "ExampleManetService";
 
 	LocationManager locationManager = null;
 	GeoPoint currentLocation = null;
@@ -339,8 +339,8 @@ public class CommService extends Service implements LocationListener {
 	}
 
 	public class CommBinder extends Binder {
-		public CommService getService() {
-			return CommService.this;
+		public ExampleManetService getService() {
+			return ExampleManetService.this;
 		}
 	}
 }

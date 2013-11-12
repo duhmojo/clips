@@ -1,4 +1,4 @@
-package com.drdc.test.testwifiscanner.manet;
+package com.org.test.testwifiscanner.comm;
 
 import java.util.HashSet;
 import java.util.concurrent.Callable;
@@ -17,8 +17,8 @@ import org.span.service.system.ManetConfig;
 
 import android.util.Log;
 
-public class ManetManagerObserver implements Callable<Boolean>, ManetObserver {
-	final String TAG = "ManetManagerObserver";
+public class ExampleManetObserver implements Callable<Boolean>, ManetObserver {
+	final String TAG = "ExampleManetObserver";
 
 	public ManetHelper mManetHelper = null;
 	public AdhocStateEnum mStatus = null;
@@ -28,7 +28,7 @@ public class ManetManagerObserver implements Callable<Boolean>, ManetObserver {
 
     boolean expectedState = false;
 
-	public ManetManagerObserver(ManetHelper manetHelper) {
+	public ExampleManetObserver(ManetHelper manetHelper) {
 		this.mManetHelper = manetHelper;
 		this.mManetHelper.registerObserver(this);
 	}
